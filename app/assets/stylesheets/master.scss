@@ -1,0 +1,53 @@
+$primary-font: 'Montserrat', sans-serif;
+$secondary-font: 'Aref Ruqaa', serif;
+
+.navbar-default {
+  font-family: $secondary-font;
+   font-size: 30px;
+   background-color: #4636bf;
+}
+
+html, body{
+  font-family: $secondary-font;
+}
+
+.container-fluid {
+  font-weight: 100; 
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #337ab7;
+  
+}
+
+.details {
+  font-family: $primary-font;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+  font-size: 23px;
+}
+
+.navbar-default .navbar-brand {
+    color: #120ec1;
+    font-size: 30px;
+}
+
+.info{
+  padding-left: 30px;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.panel-default > .panel-heading {
+  color: #020e0b;
+  background-color: #a09bc7;
+  border-color: #f1f0f0;
+  font-size: 20px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+

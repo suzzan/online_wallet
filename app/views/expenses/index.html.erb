@@ -1,3 +1,42 @@
-<h1>Online Wallet</h1>
+<div class="info"><h1>Online Wallet</h1>
 <p>Record your daily expenses</p>
 <p>Never forget wher you spent your money</p>
+</div>
+<br>
+<div  class="details">
+<div class="col-xs-12 col-md-8 col-md-offset-2">
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Your Expenses!!!</div>
+
+  <!-- Table -->
+  <table class="table">
+      <tr>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Amount</th>
+      </tr>
+      
+      <tr>
+          <% @expenses.each do |expense| %>
+          <td><h4><%= expense.date %></h4></td>
+          <td> <h4><%= expense.description %></h4></td>
+          <td><h4><%= expense.amount %></h4></td>
+         <td>
+           
+              <%= link_to "EDIT", edit_expense_path(expense), class: 'btn btn-sm btn-success'%>
+             <%= link_to "DELETE", expense_path(expense), method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: "Are you Sure???"}  %>
+           </div>
+           </td>
+           </tr>
+        <% end %>
+  </table>
+</div>
+
+
+  
+  <h2>Balance: <%= @expenses.where("amount > ?", 0).sum(:amount) %></h2>
+  <h2>Debt:<%= @expenses.where("amount < ?", 0).sum(:amount) %></h2>
+  <h2>Remaining:<%= @expenses.sum(:amount) %></h2>
+</div>
+</div>

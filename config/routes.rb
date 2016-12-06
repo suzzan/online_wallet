@@ -54,4 +54,7 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   root 'expenses#index'
+  resources :expenses
+  get 'about' => 'static_pages#about'
+  get 'new_record' => 'static_pages#new_record'
 end
