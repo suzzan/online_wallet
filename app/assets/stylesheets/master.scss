@@ -34,7 +34,7 @@ html, body{
 }
 
 .info{
-  padding-left: 30px;
+  padding: 0px 30px 0px 30px;
   font-size: 20px;
   letter-spacing: 2px;
 }
@@ -49,5 +49,10 @@ html, body{
 a {
   color: #ffffff;
   text-decoration: none;
+}
+
+
+.form {
+    padding: 0px 30px 0px 0px;
 }
 
